@@ -11,11 +11,12 @@ public interface EmployeeService {
 	
 	public Employee getEmployee(Integer id);
 	
-	@Transactional
+	public List<Employee> findByFirstName(String name);
+
 	public List<Employee> findAll();
 	
 	@Transactional    
-	Employee saveOrUpdate(Employee employee);
+	Employee save(Employee employee);
 
     @Transactional    
     void delete(Integer id);

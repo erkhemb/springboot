@@ -9,8 +9,10 @@ import org.springframework.stereotype.Repository;
 import com.pagmaa.demo.employeeRegistration.entity.Employee;
 
 @Repository
-public interface EmployeeRepo extends JpaRepository<Employee, Integer>{
+public interface EmployeeRepo extends JpaRepository<Employee, Integer> {
 
-	
-	public List<Employee> findAll();
+	//@Query("SELECT a FROM Employee a WHERE " + "(:name IS NULL OR a.name like %:name%)")
+	public List<Employee> findByFirstName(String name);
+
+
 }

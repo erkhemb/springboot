@@ -7,7 +7,10 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.Generated;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Employer {
 
 	@Id

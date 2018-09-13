@@ -14,13 +14,6 @@ public interface EmployerRepo extends JpaRepository<Employer, Integer> {
 
 	@Query("SELECT a FROM Employer a WHERE " +
             "(:name IS NULL OR a.name like %:name%)")
-	public List<Employer> findAll(String name);
-	
-	public List<Employer> findByName(String name);
-	
-//	public Optional<Employer> findById(Integer id);
-	
-	public List<Employer> findAll();
-	
+	public List<Employer> findByName(String name);	
 	
 }
